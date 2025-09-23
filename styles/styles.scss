@@ -1,6 +1,7 @@
 :root{
     --regFont: clamp(1rem, 1vw, 1.2rem);
     --bigFont: clamp(2rem, 3vw, 2.5rem);
+    --smallFont: clamp(0.6rem, 0.7vw, 1rem)
 }
 
 body{
@@ -9,6 +10,25 @@ body{
     overflow: hidden;
     position: relative;
     font-family: "Manrope", sans-serif;
+    background-color: white;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    width: 100%;
+    z-index: 6666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--smallFont);
+
+    a{
+        text-decoration: underline;
+    }
 }
 
 nav{
@@ -19,7 +39,7 @@ nav{
     height: auto;
     padding: 20px;
     width: 100%;
-    z-index: 999999;
+    z-index: 7777;
 
     display: flex;
     justify-content: space-between;
@@ -31,7 +51,66 @@ nav{
             color: black;
         }
     }
+
+    .nav-right{
+        .hamburger-icon{
+            width: 32px;
+            height: 32px;
+            overflow: hidden;
+            z-index: 999;
+        }
+
+        .bottom-line, .middle-line{
+            stroke-dasharray: 176;  
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 0.3s ease;
+            will-change: stroke-dashoffset;
+        }
+
+        .hamburger-icon.clicked .bottom-line {
+            stroke-dashoffset: 88; 
+        }
+
+        .hamburger-icon.clicked .middle-line {
+            stroke-dashoffset: 40; 
+        }
+    }
+
 }
+
+.menu-nav {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 8888;
+    text-align: right;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    li{
+        font-size: var(--bigFont);
+        font-weight: 500;
+        text-transform: uppercase;
+        transform: translateX(-20px);
+        transition: all 0.3s ease;
+        transform-origin: right;
+        opacity: 0;
+
+
+        &.show{
+            transform: translateX(0px);
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
 
 #custom-cursor{
     position: fixed;
@@ -45,7 +124,7 @@ nav{
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
-    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
 
     &.right{
         background: url('../media/cursors/cursor_right.svg');
@@ -80,7 +159,19 @@ nav{
     width: 100vw;
     background-color: white;
     transform: translateY(0);
-    transition: translate 0.9s ease;
+    transition: transform 0.9s ease, opacity 0.6s ease;
+
+    &.hidden{
+        transform: translateY(-100vh);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &.active{
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
 
     .gallery__container{
         position: absolute;
@@ -94,7 +185,7 @@ nav{
 
         .img__container{
             width: auto;
-            height: 55vh;
+            height: 60vh;
 
             img{
                 object-fit: contain;
@@ -106,6 +197,7 @@ nav{
             width: 100%;
             display: flex;
             justify-content: space-between;
+            margin-top: 5px;
         }
     }
 
@@ -116,7 +208,7 @@ nav{
         transform: translate(-50%, -50%);
         z-index: 100;
         width: 100vw;
-        height: calc(55vh + 20px);
+        height: calc(60vh + 20px);
     }
 }
 

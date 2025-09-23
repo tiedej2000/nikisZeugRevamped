@@ -13,7 +13,7 @@ window.addEventListener('mousemove', moveCursor)
 
 // Show an image from the home collection by index
 let index = 0; 
-let homeGallery = []; // Store the images array globally
+let homeGallery = []; 
 
 fetch('media/images.json')
 	.then(response => response.json())
@@ -86,3 +86,52 @@ document.addEventListener('mousemove', (event => {
 		cursor.classList.remove('right')
 	}
 }))
+
+
+//hamburger toggle
+
+const menuButton = document.querySelector('.hamburger-icon')
+menuButton.addEventListener('click', () =>{
+	toggleNavMenu()
+    menuButton.classList.toggle('clicked')
+})
+
+function toggleNavMenu () {
+    const nav = document.querySelector('.menu-nav')
+	const navListItems = document.querySelectorAll('.menu-nav li')
+
+    if(nav.classList.contains('active')){
+		setTimeout(() =>{
+        	nav.classList.remove('active')
+		},1000)
+
+		navListItems.forEach((item, i) => {
+			setTimeout(() => {
+				item.classList.remove('show');
+			}, i * 100);
+		});
+    } 
+	
+	else{
+        nav.classList.add('active')
+		navListItems.forEach((item, i) => {
+			setTimeout(() => {
+				item.classList.add('show');
+			}, i * 100); 
+		});
+    }
+}
+
+//remove current active section
+
+const menuListItems = document.querySelectorAll('.menu-nav li');
+menuListItems.forEach(item => {
+	item.addEventListener('click', () => {
+		const galleryContainer = document.querySelector('.gallery');
+		if (item.id === 'gallery') {
+			galleryContainer.classList.remove('hidden');
+		} else {
+			galleryContainer.classList.add('hidden');
+		}
+	});
+});
