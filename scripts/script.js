@@ -122,16 +122,48 @@ function toggleNavMenu () {
     }
 }
 
-//remove current active section
+function playLoading (){
+	const body = document.querySelector('body')
 
-const menuListItems = document.querySelectorAll('.menu-nav li');
-menuListItems.forEach(item => {
-	item.addEventListener('click', () => {
-		const galleryContainer = document.querySelector('.gallery');
-		if (item.id === 'gallery') {
-			galleryContainer.classList.remove('hidden');
-		} else {
-			galleryContainer.classList.add('hidden');
-		}
-	});
+	body.classList.add('active')
+
+	setTimeout(()=>{
+		body.classList.remove('active')
+	},1000)
+}
+
+
+// hide show sections
+const menuItems = document.querySelectorAll('.menu-nav li');
+
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const targetSection = document.querySelector(`.${item.id}`);
+        
+        // Hide all sections except the target one
+        document.querySelectorAll('section').forEach(section => {
+            if (section !== targetSection) {
+				section.classList.add('hide')
+                setTimeout(()=>{
+                    section.classList.add('hidden')
+					section.classList.remove('show')
+                },500)
+            }
+        });
+        
+        // Show the target section
+        if (targetSection) {
+			targetSection.classList.remove('hide')
+            setTimeout(()=>{
+				targetSection.classList.remove('hidden')
+				targetSection.classList.add('show')
+			},500)
+        }
+		
+		setTimeout(()=>{
+			toggleNavMenu()
+		},500)
+		playLoading()
+    });
 });
+

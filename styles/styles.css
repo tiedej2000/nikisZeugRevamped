@@ -1,7 +1,9 @@
 :root {
   --regFont: clamp(1rem, 1vw, 1.2rem);
   --bigFont: clamp(2rem, 3vw, 2.5rem);
-  --smallFont: clamp(0.6rem, 0.7vw, 1rem) ;
+  --smallFont: clamp(0.6rem, 0.7vw, 1rem);
+  --white: white;
+  --black: #101010;
 }
 
 body {
@@ -11,6 +13,21 @@ body {
   position: relative;
   font-family: "Manrope", sans-serif;
   background-color: white;
+}
+body::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--white);
+  mix-blend-mode: difference;
+  z-index: 10000;
+  transition: height 0.6s ease;
+}
+body.active::before {
+  height: 100%;
 }
 
 footer {
@@ -45,13 +62,15 @@ nav {
 }
 nav .nav-left h1 {
   font-size: var(--bigFont);
-  color: black;
+  color: var(--black);
+  font-weight: 900;
 }
 nav .nav-right .hamburger-icon {
   width: 32px;
   height: 32px;
   overflow: hidden;
-  z-index: 999;
+  z-index: 99999;
+  position: relative;
 }
 nav .nav-right .bottom-line, nav .nav-right .middle-line {
   stroke-dasharray: 176;
@@ -75,10 +94,14 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   text-align: right;
   opacity: 0;
   pointer-events: none;
+  width: auto;
 }
 .menu-nav.active {
   opacity: 1;
   pointer-events: all;
+}
+.menu-nav.active::before {
+  opacity: 1;
 }
 .menu-nav li {
   font-size: var(--bigFont);
@@ -124,15 +147,22 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   mix-blend-mode: difference;
 }
 
-.test-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  width: auto;
-  z-index: 1000000;
-  background-color: red;
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .gallery {
   position: relative;
   z-index: 10;
@@ -140,17 +170,18 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   width: 100vw;
   background-color: white;
   transform: translateY(0);
-  transition: transform 0.9s ease, opacity 0.6s ease;
+  opacity: 1;
+  transition: opacity 0.9s ease;
 }
 .gallery.hidden {
-  transform: translateY(-100vh);
+  display: none;
   opacity: 0;
-  pointer-events: none;
 }
-.gallery.active {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: all;
+.gallery.hide {
+  animation: hide 0.5s ease forwards;
+}
+.gallery.show {
+  animation: show 0.5s ease forwards;
 }
 .gallery .gallery__container {
   position: absolute;
@@ -186,10 +217,121 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   height: calc(60vh + 20px);
 }
 
-.hide-down {
-  transform: translateY(100vh);
+.projects {
+  display: flex;
+  gap: 10px;
+  width: 100vw;
+  overflow-x: scroll;
+  height: 100vh;
+  padding: 160px 20px 0 20px;
+  will-change: scroll-position;
+  position: relative;
+  scrollbar-width: none;
 }
-
-.hide-up {
-  transform: translateY(-100vh);
+.projects.hidden {
+  max-height: 0;
+  display: none;
+}
+.projects.hide {
+  animation: hide 0.5s ease forwards;
+}
+.projects.show {
+  animation: show 0.5s ease forwards;
+}
+.projects::-webkit-scrollbar {
+  display: none;
+}
+.projects .back__button {
+  height: 40px;
+  display: flex;
+  position: absolute;
+  top: 120px;
+  left: 20px;
+}
+.projects .back__button a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 10px 10px 0px;
+  color: var(--black);
+}
+.projects .back__button a svg {
+  fill: var(--black);
+  width: 20px;
+  height: 20px;
+}
+.projects .project {
+  flex-shrink: 0;
+  width: 22.5vw;
+  height: 100%;
+  color: var(--black);
+  padding-right: 30px;
+}
+.projects .project .project__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.projects .project .project__content .heading {
+  font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+.projects .project .project__content .ph_heading {
+  height: clamp(1.5rem, 2.4vw, 3.5rem);
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 2px;
+}
+.projects .project .project__content .text {
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.projects .project .project__content .ph_text {
+  height: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 2px;
+}
+.projects .project .project__content .preview {
+  width: 100%;
+  height: auto;
+}
+.projects .project .project__content .preview img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid var(--black);
+  transition: border 0.3s ease;
+  image-rendering: crisp-edges;
+}
+.projects .project .project__content .preview img:hover {
+  border: 1px solid var(--white);
+}
+.projects .project .project__content .ph_preview {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 250px;
+  width: 100%;
+  border-radius: 2px;
+  display: grid;
+  place-content: center;
+}
+.projects .project .project__content .ph_button {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.2);
+}
+.projects .project .project__content .link__button a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+.projects .project .project__content .link__button a:hover {
+  text-decoration: underline;
+}
+.projects .project .project__content .link__button a svg {
+  fill: var(--white);
+  width: 20px;
+  height: auto;
 }/*# sourceMappingURL=styles.css.map */
