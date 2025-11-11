@@ -88,7 +88,7 @@ document.addEventListener('mousemove', (event => {
 }))
 
 
-//hamburger toggle
+/* hamburger toggle
 
 const menuButton = document.querySelector('.hamburger-icon')
 menuButton.addEventListener('click', () =>{
@@ -122,6 +122,8 @@ function toggleNavMenu () {
     }
 }
 
+*/
+
 function playLoading (){
 	const body = document.querySelector('body')
 
@@ -134,10 +136,11 @@ function playLoading (){
 
 
 // hide show sections
-const menuItems = document.querySelectorAll('.menu-nav li');
+const menuItems = document.querySelectorAll('.nav-right li');
 
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
+		console.log('clicked')
         const targetSection = document.querySelector(`.${item.id}`);
         
         // Hide all sections except the target one
@@ -160,9 +163,7 @@ menuItems.forEach(item => {
 			},500)
         }
 		
-		setTimeout(()=>{
-			toggleNavMenu()
-		},500)
+		// toggleNavMenu()
 		playLoading()
     });
 });

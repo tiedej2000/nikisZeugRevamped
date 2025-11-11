@@ -1,5 +1,6 @@
+@charset "UTF-8";
 :root {
-  --regFont: clamp(1rem, 1vw, 1.2rem);
+  --regFont: clamp(1rem, 1.2vw, 1.4rem);
   --bigFont: clamp(2rem, 3vw, 2.5rem);
   --smallFont: clamp(0.6rem, 0.7vw, 1rem);
   --white: white;
@@ -61,16 +62,24 @@ nav {
   align-items: center;
 }
 nav .nav-left h1 {
-  font-size: var(--bigFont);
+  font-size: var(--regFont);
   color: var(--black);
   font-weight: 900;
 }
+nav .nav-right {
+  display: flex;
+  gap: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 20px;
+}
 nav .nav-right .hamburger-icon {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   overflow: hidden;
   z-index: 99999;
   position: relative;
+  display: none;
 }
 nav .nav-right .bottom-line, nav .nav-right .middle-line {
   stroke-dasharray: 176;
@@ -104,13 +113,14 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   opacity: 1;
 }
 .menu-nav li {
-  font-size: var(--bigFont);
-  font-weight: 500;
+  font-size: var(--regFont);
+  font-weight: 700;
   text-transform: uppercase;
   transform: translateX(-20px);
   transition: all 0.3s ease;
   transform-origin: right;
   opacity: 0;
+  line-height: 1.4;
 }
 .menu-nav li.show {
   transform: translateX(0px);
@@ -185,7 +195,7 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
 }
 .gallery .gallery__container {
   position: absolute;
-  top: 52.5%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -194,7 +204,7 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
 }
 .gallery .gallery__container .img__container {
   width: auto;
-  height: 60vh;
+  height: 65vh;
 }
 .gallery .gallery__container .img__container img {
   -o-object-fit: contain;
@@ -206,6 +216,7 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
+  font-size: 20px;
 }
 .gallery .ctrl__container {
   position: absolute;
@@ -223,7 +234,7 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   width: 100vw;
   overflow-x: scroll;
   height: 100vh;
-  padding: 160px 20px 0 20px;
+  padding: 120px 20px 0 20px;
   will-change: scroll-position;
   position: relative;
   scrollbar-width: none;
@@ -245,7 +256,7 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   height: 40px;
   display: flex;
   position: absolute;
-  top: 120px;
+  top: 85px;
   left: 20px;
 }
 .projects .back__button a {
@@ -334,4 +345,52 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   fill: var(--white);
   width: 20px;
   height: auto;
+}
+
+.impressum {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  padding: 100px 20px 0 20px;
+  background-color: white;
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 0.9s ease;
+  display: flex;
+}
+.impressum.hidden {
+  display: none;
+  opacity: 0;
+}
+.impressum.hide {
+  animation: hide 0.5s ease forwards;
+}
+.impressum.show {
+  animation: show 0.5s ease forwards;
+}
+.impressum .impressum-container {
+  width: 40%;
+  text-align: right;
+}
+.impressum .datenschutzerklärung {
+  height: calc(100% - 60px);
+  width: 60%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  position: relative;
+  z-index: 1;
+}
+.impressum .datenschutzerklärung .datenschutzerklärung__big_header {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.impressum .datenschutzerklärung .datenschutzerklärung__small_header {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.impressum .datenschutzerklärung .datenschutzerklärung__text {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }/*# sourceMappingURL=styles.css.map */
