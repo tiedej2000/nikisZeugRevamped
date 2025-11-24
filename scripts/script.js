@@ -11,6 +11,10 @@ const moveCursor = (e) =>{
 
 window.addEventListener('mousemove', moveCursor)
 
+document.addEventListener('DOMContentLoaded', () =>{
+	playLoading()
+})
+
 // Gallery configuration - change this to switch galleries
 let GALLERY_SET = 'home'; // Options: 'home', 'mfrits'
 

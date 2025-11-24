@@ -268,8 +268,12 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
 }
 .projects .back__button a svg {
   fill: var(--black);
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: auto;
+  margin-top: 2px;
+}
+.projects .back__button a span {
+  line-height: 1;
 }
 .projects .project {
   flex-shrink: 0;
@@ -295,7 +299,7 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   border-radius: 2px;
 }
 .projects .project .project__content .text {
-  line-height: 1.2;
+  line-height: 1.4;
   margin-bottom: 10px;
 }
 .projects .project .project__content .ph_text {
@@ -332,19 +336,20 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.2);
 }
-.projects .project .project__content .link__button a {
+.projects .project .project__content .link__button {
   display: flex;
   align-items: center;
   gap: 5px;
   transition: all 0.3s ease;
 }
-.projects .project .project__content .link__button a:hover {
+.projects .project .project__content .link__button:hover {
   text-decoration: underline;
 }
-.projects .project .project__content .link__button a svg {
-  fill: var(--white);
-  width: 20px;
+.projects .project .project__content .link__button svg {
+  fill: var(--black);
+  width: 15px;
   height: auto;
+  margin-top: 2px;
 }
 
 .impressum {
