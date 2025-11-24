@@ -11,27 +11,70 @@ const moveCursor = (e) =>{
 
 window.addEventListener('mousemove', moveCursor)
 
-// Show an image from the home collection by index
-let index = 0; 
-let homeGallery = []; 
+// Gallery configuration - change this to switch galleries
+let GALLERY_SET = 'home'; // Options: 'home', 'mfrits'
 
-fetch('media/images.json')
+let index = 0; 
+let currentGallery = []; 
+
+let allData = {};
+
+fetch('data/images.json')
 	.then(response => response.json())
 	.then(data => {
-		homeGallery = data.home; 
+		allData = data;
+		currentGallery = data[GALLERY_SET]; 
 		showImage()
 	});
 
+function changeGallery(galleryName) {
+	GALLERY_SET = galleryName;
+	currentGallery = allData[GALLERY_SET];
+	index = 0;
+	showGallery()
+	showImage();
+}
+
+function showGallery() {
+	const projectSection = document.querySelector('section.projects')
+	projectSection.classList.add('hide')
+	setTimeout(()=>{
+		projectSection.classList.add('hidden')
+		projectSection.classList.remove('show')
+	},500)
+
+	const gallerySection = document.querySelector('section.gallery')
+	gallerySection.classList.remove('hide')
+	setTimeout(()=>{
+		gallerySection.classList.remove('hidden')
+		gallerySection.classList.add('show')
+	},500)
+
+	playLoading()
+} 
+
 function showImage(){
-	const image = homeGallery[index]; 
-	document.querySelector('.img__container img').src = image.src;
-	document.querySelector('.img__container img').alt = image.alt;
-	document.getElementById('title').textContent = image.title;
-	document.getElementById('date').textContent = image.date;
+	const image = currentGallery[index];
+	if(image.src){
+		document.querySelector('.img__container img').src = image.src;
+	}
+
+	if(image.alt){
+		document.querySelector('.img__container img').alt = image.alt;
+	}
+
+	if(image.title){
+		document.getElementById('title').textContent = image.title;
+	}
+
+	if(image.info){
+		document.getElementById('info').textContent = image.info;
+	}
+
 }
 
 function nextImage(){
-	if(index === homeGallery.length - 1){ 
+	if(index === currentGallery.length - 1){ 
 		index = 0
 	} else{
 		index++
@@ -41,7 +84,7 @@ function nextImage(){
 
 function prevImage(){
 	if(index === 0){
-        index = homeGallery.length - 1
+        index = currentGallery.length - 1
     } else{
         index--
     }
@@ -86,7 +129,6 @@ document.addEventListener('mousemove', (event => {
 		cursor.classList.remove('right')
 	}
 }))
-
 
 /* hamburger toggle
 
@@ -134,13 +176,11 @@ function playLoading (){
 	},1000)
 }
 
-
 // hide show sections
 const menuItems = document.querySelectorAll('.nav-right li');
 
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
-		console.log('clicked')
         const targetSection = document.querySelector(`.${item.id}`);
         
         // Hide all sections except the target one

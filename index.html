@@ -26,7 +26,7 @@
             </div>
             -->
             <ul class="nav-right">
-                <li id="gallery">gallery</li>
+                <li id="gallery" onclick="changeGallery('home')">gallery</li>
                 <li id="projects">projects</li>
                 <li id="about">about</li>
                 <li id="impressum">impressum</li>
@@ -47,26 +47,26 @@
         <section class="gallery hidden">
             <article class="gallery__container">
                 <div class="img__container">
-                    <img src="./media/01.untitled-2024 (4).jpg" alt="">
+                    <img src="" alt="">
                 </div>
                 <ul class="gallery__info">
-                    <li id="title" class="title">untitled</li>
-                    <li id="date" class="date">2024</li>
+                    <li id="title" class="title"></li>
+                    <li id="info" class="info"></li>
                 </ul>
             </article>
             <article class="ctrl__container"></article>
         </section>
 
-        <section class="projects hidden">
+        <section class="projects">
             <article class="back__button">
                 <a href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H107.31l18.35,18.34a8,8,0,0,1-11.32,11.32l-32-32a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L107.31,120H168A8,8,0,0,1,176,128Z"></path></svg><span>back</span></a>
             </article>
 
             <article class="project">
                 <ul class="project__content">
-                    <li class="heading">My Face is Red in the Sun</li>
+                    <li class="heading">My Face is <br> Red in the Sun</li>
                     <li class="text">behind the scenes photos of "My Face Is Red In The Sun", an experimental short film shot in August 2024. Directed by Nelly Schmidtlein, it follows the story of Biene and her older sister, who spend their summer break at their grandparents campsite and run off after they have an argument.</li>
-                    <li class="preview"><img src="media/projects/MFIRITS/01.jpg" alt="My Face is Red in the Sun Preview image" fetchpriority="high"></li>
+                    <li class="preview" onclick="changeGallery('mfirits')"><img src="media/projects/MFIRITS/01.jpg" alt="My Face is Red in the Sun Preview image" fetchpriority="high"></li>
                     <li class="link__button"><span>see all</span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M168,96v48a8,8,0,0,1-16,0V115.31l-50.34,50.35a8,8,0,0,1-11.32-11.32L140.69,104H112a8,8,0,0,1,0-16h48A8,8,0,0,1,168,96Zm64,32A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg></li>
                 </ul>
             </article>
@@ -108,7 +108,7 @@
             </article>
         </section>
 
-        <section class="impressum">
+        <section class="impressum hidden">
             <article class="datenschutzerklärung">
 
                 <h1 class="datenschutzerklärung__big_header" style="margin-bottom: 15px; font-size: 28px;">Datenschutzerklärung</h1>

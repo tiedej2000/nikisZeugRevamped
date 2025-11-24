@@ -1,0 +1,330 @@
+{
+    "home":[
+        {
+            "src": "media/home/01.untitled-2024.jpg",
+            "title": "untitled",
+            "info": "2024",
+            "alt": "Artwork titled 'untitled', created in 2024"
+        },
+        {
+            "src": "media/home/02.untitled-2024.jpg",
+            "title": "untitled",
+            "info": "2024",
+            "alt": "Artwork titled 'untitled', created in 2024"
+        },
+        {
+            "src": "media/home/03.untitled-2024.jpg",
+            "title": "untitled",
+            "info": "2024",
+            "alt": "Artwork titled 'untitled', created in 2024"
+        },
+        {
+            "src": "media/home/04.identitätsfrage-2024.jpg",
+            "title": "identitätsfrage",
+            "info": "2024",
+            "alt": "Artwork titled 'identitätsfrage', created in 2024"
+        },
+        {
+            "src": "media/home/05.späher-2024.jpg",
+            "title": "späher",
+            "info": "2024",
+            "alt": "Artwork titled 'späher', created in 2024"
+        },
+        {
+            "src": "media/home/06.untitled-2024.jpg",
+            "title": "untitled",
+            "info": "2024",
+            "alt": "Artwork titled 'untitled', created in 2024"
+        },
+        {
+            "src": "media/home/07.inferno-2024.jpg",
+            "title": "inferno",
+            "info": "2024",
+            "alt": "Artwork titled 'inferno', created in 2024"
+        },
+        {
+            "src": "media/home/08.untitled-2025.jpg",
+            "title": "untitled",
+            "info": "2025",
+            "alt": "Artwork titled 'untitled', created in 2025"
+        },
+        {
+            "src": "media/home/09.untitled-2024.jpg",
+            "title": "untitled",
+            "info": "2024",
+            "alt": "Artwork titled 'untitled', created in 2024"
+        },
+        {
+            "src": "media/home/10.untitled-2024.jpg",
+            "title": "untitled",
+            "info": "2024",
+            "alt": "Artwork titled 'untitled', created in 2024"
+        },
+        {
+            "src": "media/home/11.20-2023.jpg",
+            "title": "20",
+            "info": "2023",
+            "alt": "Artwork titled '20', created in 2023"
+        },
+        {
+            "src": "media/home/12.untitled-2024.jpg",
+            "title": "untitled",
+            "info": "2024",
+            "alt": "Artwork titled 'untitled', created in 2024"
+        }
+    ],
+    "mfirits": [
+        {
+            "src": "media/MFIRITS/01.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "01/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/02.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "02/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/03.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "03/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/04.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "04/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/05.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "05/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/06.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "06/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/07.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "07/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/08.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "08/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/09.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "09/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/10.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "10/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/11.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "11/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/12.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "12/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/13.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "13/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/14.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "14/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/15.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "15/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/16.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "16/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/17.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "17/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/18.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "18/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/19.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "19/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/20.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "20/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/21.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "21/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/22.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "22/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/23.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "23/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/24.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "24/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/25.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "25/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/26.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "26/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/27.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "27/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/28.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "28/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/29.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "29/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/30.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "30/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/31.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "31/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/32.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "32/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/33.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "33/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/34.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "34/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/35.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "35/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/36.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "36/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/37.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "37/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/38.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "38/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/39.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "39/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/40.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "40/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/41.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "41/42",
+            "alt": ""
+        },
+        {
+            "src": "media/MFIRITS/42.webp",
+            "title": "My Face is Red in the Sun",
+            "info": "42/42",
+            "alt": ""
+        }
+    ]
+}
