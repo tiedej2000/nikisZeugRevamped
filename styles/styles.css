@@ -345,12 +345,6 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
 .projects .project .project__content .link__button:hover {
   text-decoration: underline;
 }
-.projects .project .project__content .link__button svg {
-  fill: var(--black);
-  width: 15px;
-  height: auto;
-  margin-top: 2px;
-}
 
 .impressum {
   position: relative;
