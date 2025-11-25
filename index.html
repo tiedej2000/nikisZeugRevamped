@@ -24,13 +24,14 @@
                     <line class="bottom-line" x1="216" y1="184" x2="40" y2="184" stroke="black" stroke-width="20" stroke-linecap="round" />
                 </svg>
             </div>
-            -->
             <ul class="nav-right">
                 <li id="gallery" onclick="changeGallery('home')">gallery</li>
                 <li id="projects">projects</li>
                 <li id="about">about</li>
                 <li id="impressum">impressum</li>
             </ul>
+            -->
+
 
         </nav>
     </header>
@@ -49,10 +50,12 @@
                 <div class="img__container">
                     <img src="" alt="">
                 </div>
+                <!--
                 <ul class="gallery__info">
                     <li id="title" class="title"></li>
                     <li id="info" class="info"></li>
                 </ul>
+                -->
             </article>
             <article class="ctrl__container"></article>
         </section>
@@ -66,7 +69,7 @@
                 <ul class="project__content">
                     <li class="heading">My Face is <br> Red in the Sun</li>
                     <li class="text">behind the scenes photos of "My Face Is Red In The Sun", an experimental short film shot in August 2024. Directed by Nelly Schmidtlein, it follows the story of Biene and her older sister, who spend their summer break at their grandparents campsite and run off after they have an argument.</li>
-                    <li class="preview" onclick="changeGallery('mfirits')"><img src="media/projects/MFIRITS/01.jpg" alt="My Face is Red in the Sun Preview image" fetchpriority="high"></li>
+                    <li class="preview" onclick="changeGallery('mfirits')"><img src="media/MFIRITS/02.webp" alt="My Face is Red in the Sun Preview image" fetchpriority="high"></li>
                     <li class="link__button" onclick="changeGallery('mfirits')"><span>see all</span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M168,96v48a8,8,0,0,1-16,0V115.31l-50.34,50.35a8,8,0,0,1-11.32-11.32L140.69,104H112a8,8,0,0,1,0-16h48A8,8,0,0,1,168,96Zm64,32A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg></li>
                 </ul>
             </article>
@@ -105,6 +108,80 @@
                     <li class="ph_preview"></li>
                     <li class="ph_button">upcoming</li>
                 </ul>
+            </article>
+        </section>
+
+        <section class="about hidden">
+            <article class="info__wrapper">
+                <h1>Exhibitions</h1>
+                <ul>
+                    <li>
+                        <div class="info">
+                            <span>Offene Kunstgallerie, JuZe Kessel Offenburg</span><span>September 2023</span>
+                        </div>
+
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <span>Werkschau, Hochschule Offenburg</span><span>October 2023</span>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <span>Neue Vielfalt, Cafe Kakadu, Offenburg</span><span>March 2024</span>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <span>Werkschau, Hochschule Offenburg</span><span>July 2024</span>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <span>Jugendkunstpreis 2024 (Preisträger), Kunstzentrum Karlskaserne, Ludwigsburg</span><span>October 2024</span>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <span>BlechTogether, Alte Blechnerei, Offenburg</span> <span>December 2024</span>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info">
+                            <span>Körper/Maschine, La Maison Rose Gruber,  Strasbourg</span> <span>July 2025</span>
+                        </div>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="image__wrapper">
+                <picture>
+                    <source media="(max-width: 599px)" srcset="../media/bilder/Selbstportrait_Niki_mobile.jpg">
+                    <img src="../media/bilder/Selbstportrait_Niki.jpg" alt="Nikit Bitsch Fotograf 22" fetchpriority="high">
+                </picture>
+               
+                <p>Photographer and filmmaker from <a href="https://maps.app.goo.gl/hGQeWHeTbmgEPZKi6" target="_blank">Offenburg, Germany</a>.</p>
             </article>
         </section>
 
@@ -224,7 +301,9 @@
 
     <footer>
         <div>© Nikita Bitsch</div>
+        <!--
         <div>site by <a href="https://anix-works.de/">anix.works</a></div>
+        -->
     </footer>
 </body>
 <script src="scripts/script.js"></script>

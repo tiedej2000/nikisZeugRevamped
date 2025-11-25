@@ -196,15 +196,15 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
 .gallery .gallery__container {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 100%;
+  transform: translate(-100%, -50%);
   display: flex;
   flex-direction: column;
   height: auto;
 }
 .gallery .gallery__container .img__container {
   width: auto;
-  height: 65vh;
+  height: 100vh;
 }
 .gallery .gallery__container .img__container img {
   -o-object-fit: contain;
@@ -344,6 +344,97 @@ nav .nav-right .hamburger-icon.clicked .middle-line {
 }
 .projects .project .project__content .link__button:hover {
   text-decoration: underline;
+}
+.projects .project .project__content .link__button svg {
+  height: 18px;
+  width: auto;
+}
+
+.about {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  padding: 120px 20px 0 20px;
+  background-color: white;
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 0.9s ease;
+  display: flex;
+  gap: 30px;
+}
+.about.hidden {
+  max-height: 0;
+  display: none;
+}
+.about.hide {
+  animation: hide 0.5s ease forwards;
+}
+.about.show {
+  animation: show 0.5s ease forwards;
+}
+.about .image__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+.about .image__wrapper img {
+  height: auto;
+  max-height: 60vh;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 10px;
+}
+.about .image__wrapper p {
+  color: var(--black);
+  font-size: 16px;
+}
+.about .image__wrapper p a {
+  text-decoration: underline;
+}
+.about .info__wrapper {
+  width: 100%;
+  height: auto;
+  color: var(--black);
+  margin-right: 30px;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.about .info__wrapper::-webkit-scrollbar {
+  display: none;
+}
+.about .info__wrapper h1 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.about .info__wrapper ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+}
+.about .info__wrapper ul li {
+  overflow: hidden;
+}
+.about .info__wrapper ul li .info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.about .info__wrapper ul li .description {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  max-width: 75%;
+}
+.about .info__wrapper ul li:hover .description {
+  max-height: 120px;
+  opacity: 1;
 }
 
 .impressum {

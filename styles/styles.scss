@@ -223,8 +223,8 @@ nav{
     .gallery__container{
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 100%;
+        transform: translate(-100%, -50%);
         display: flex;
         flex-direction: column;
 
@@ -232,7 +232,7 @@ nav{
 
         .img__container{
             width: auto;
-            height: 65vh;
+            height: 100vh;
 
             img{
                 object-fit: contain;
@@ -395,6 +395,113 @@ nav{
 
                 &:hover{
                     text-decoration: underline;
+                }
+
+                svg{
+                    height: 18px;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+.about{
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    padding: 120px 20px 0 20px;
+    background-color: white;
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.9s ease;
+    display: flex;  
+    gap: 30px; 
+
+    &.hidden{
+        max-height: 0;
+        display: none;
+    }
+
+    &.hide{
+        animation: hide 0.5s ease forwards;
+    }
+
+    &.show{
+        animation: show 0.5s ease forwards;
+    }
+
+    .image__wrapper{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        img{
+            height: auto;
+            max-height: 60vh;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+
+        p{
+            color: var(--black);
+            font-size: 16px;
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .info__wrapper{
+        width: 100%;
+        height: auto;
+        color: var(--black);
+        margin-right: 30px;
+        margin-bottom: 50px;
+        font-size: 1.1rem;
+        overflow-y: scroll;
+
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        h1{
+            font-weight: normal;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 16px;
+
+            li{
+                overflow: hidden;
+
+                .info{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 10px;
+                }
+
+                .description{
+                    max-height: 0;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+                    max-width: 75%;
+                }
+
+                &:hover .description{
+                    max-height: 120px;
+                    opacity: 1;
                 }
             }
         }
