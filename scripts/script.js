@@ -134,8 +134,6 @@ document.addEventListener('mousemove', (event => {
 	}
 }))
 
-/* hamburger toggle
-
 const menuButton = document.querySelector('.hamburger-icon')
 menuButton.addEventListener('click', () =>{
 	toggleNavMenu()
@@ -168,7 +166,6 @@ function toggleNavMenu () {
     }
 }
 
-*/
 
 function playLoading (){
 	const body = document.querySelector('body')
@@ -181,7 +178,7 @@ function playLoading (){
 }
 
 // hide show sections
-const menuItems = document.querySelectorAll('.nav-right li');
+const menuItems = document.querySelectorAll('.menu-nav li');
 
 menuItems.forEach(item => {
     item.addEventListener('click', () => {

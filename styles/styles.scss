@@ -53,12 +53,11 @@ footer{
 
 nav{
     position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0%;
+    left: 0%;
     height: auto;
     padding: 20px;
-    width: 100%;
+    width: auto;
     z-index: 7777;
 
     display: flex;
@@ -66,21 +65,11 @@ nav{
     align-items: center;
 
     .nav-left{
-        h1{
-            font-size: var(--regFont);
-            color: var(--black);
-            font-weight: 900;
-        }
-    }
-
-    .nav-right{
         .hamburger-icon{
             width: 28px;
             height: 28px;
-            overflow: hidden;
             z-index: 99999;
             position: relative;
-            display: none;
         }
 
         .bottom-line, .middle-line{
@@ -91,11 +80,11 @@ nav{
         }
 
         .hamburger-icon.clicked .bottom-line {
-            stroke-dashoffset: 88; 
+            stroke-dashoffset: -88; 
         }
 
         .hamburger-icon.clicked .middle-line {
-            stroke-dashoffset: 40; 
+            stroke-dashoffset: -40; 
         }
 
         display: flex;
@@ -103,17 +92,18 @@ nav{
         font-weight: 300;
         text-transform: uppercase;
         font-size: 20px;
+        height: 40px;
     }
 
 }
 
 .menu-nav {
     position: fixed;
-    right: 20px;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 8888;
-    text-align: right;
+    text-align: left;
     opacity: 0;
     pointer-events: none;
     width: auto;
@@ -136,7 +126,6 @@ nav{
         transform-origin: right;
         opacity: 0;
         line-height: 1.4;
-
 
         &.show{
             transform: translateX(0px);
@@ -239,15 +228,19 @@ nav{
                 height: 100%;
             }
         }
-
-        .gallery__info{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 5px;
-            font-size: 20px;
-        }
     }
+
+    .gallery__info{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+
 
     .ctrl__container{
         position: absolute;
