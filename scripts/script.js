@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 	playLoading()
 })
 
-// Gallery configuration - change this to switch galleries
-let GALLERY_SET = 'home'; // Options: 'home', 'mfrits'
+let GALLERY_SET = 'home'; 
 
 let index = 0; 
 let currentGallery = []; 
