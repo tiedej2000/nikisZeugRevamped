@@ -80,14 +80,28 @@ nav .hamburger-icon.clicked .middle-line {
 
 .menu-nav {
   position: fixed;
-  left: 20px;
+  left: 0;
   top: 50%;
+  padding-left: 20px;
   transform: translateY(-50%);
   z-index: 8888;
   text-align: left;
   opacity: 0;
   pointer-events: none;
   width: auto;
+  background-color: transparent;
+}
+.menu-nav::before {
+  content: "";
+  transform: translateY(-50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: calc(100% + 5vw);
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .menu-nav.active {
   opacity: 1;
@@ -187,34 +201,32 @@ nav .hamburger-icon.clicked .middle-line {
 .gallery .gallery__container {
   position: absolute;
   top: 50%;
-  left: 100%;
-  transform: translate(-100%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   height: auto;
 }
 .gallery .gallery__container .img__container {
-  height: 100dvh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .gallery .gallery__container .img__container img {
-  height: 100dvh;
-  max-width: 82.5vw;
+  height: 75dvh;
   width: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  display: block;
 }
 .gallery .gallery__info {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  width: 17.5vw;
+  width: auto;
   padding: 20px;
   display: flex;
   flex-direction: column;

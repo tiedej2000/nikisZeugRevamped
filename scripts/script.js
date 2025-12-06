@@ -146,7 +146,7 @@ function toggleNavMenu () {
     if(nav.classList.contains('active')){
 		setTimeout(() =>{
         	nav.classList.remove('active')
-		},1000)
+		},400)
 
 		navListItems.forEach((item, i) => {
 			setTimeout(() => {
@@ -181,6 +181,7 @@ const menuItems = document.querySelectorAll('.menu-nav li');
 
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
+		toggleNavMenu()
         const targetSection = document.querySelector(`.${item.id}`);
         
         // Hide all sections except the target one
