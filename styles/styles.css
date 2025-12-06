@@ -8,6 +8,7 @@
 }
 
 body {
+  display: flex;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -50,40 +51,29 @@ footer a {
 
 nav {
   position: fixed;
-  top: 0%;
-  left: 0%;
+  top: 20px;
+  left: 20px;
+  transform: none;
   height: auto;
-  padding: 20px;
   width: auto;
-  z-index: 7777;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 1000000000;
 }
-nav .nav-left {
-  display: flex;
-  gap: 15px;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 20px;
-  height: 40px;
-}
-nav .nav-left .hamburger-icon {
+nav .hamburger-icon {
   width: 28px;
   height: 28px;
   z-index: 99999;
   position: relative;
 }
-nav .nav-left .bottom-line, nav .nav-left .middle-line {
+nav .bottom-line, nav .middle-line {
   stroke-dasharray: 176;
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 0.3s ease;
   will-change: stroke-dashoffset;
 }
-nav .nav-left .hamburger-icon.clicked .bottom-line {
+nav .hamburger-icon.clicked .bottom-line {
   stroke-dashoffset: -88;
 }
-nav .nav-left .hamburger-icon.clicked .middle-line {
+nav .hamburger-icon.clicked .middle-line {
   stroke-dashoffset: -40;
 }
 
@@ -125,7 +115,7 @@ nav .nav-left .hamburger-icon.clicked .middle-line {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 9999;
+  z-index: 100000000000;
   transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
@@ -196,13 +186,16 @@ nav .nav-left .hamburger-icon.clicked .middle-line {
   height: auto;
 }
 .gallery .gallery__container .img__container {
-  width: auto;
-  height: 100vh;
+  height: 100dvh;
+  padding-left: 200px;
 }
 .gallery .gallery__container .img__container img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .gallery .gallery__info {
   position: absolute;

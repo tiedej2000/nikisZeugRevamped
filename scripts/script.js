@@ -98,8 +98,8 @@ function prevImage(){
 
 // adds trigger function to window to change images
 document.addEventListener('click', (event) =>{
-    const ctrlContainer = document.querySelector('.ctrl__container');
-    if(ctrlContainer.contains(event.target)){
+    const galleryContainer = document.querySelector('.gallery');
+    if(galleryContainer.contains(event.target)){
         const clickX = event.clientX
         const viewportWidth = window.innerWidth
 
@@ -115,9 +115,9 @@ document.addEventListener('click', (event) =>{
 })
 
 document.addEventListener('mousemove', (event => {
-	const ctrlContainer = document.querySelector('.ctrl__container');
+	const galleryContainer = document.querySelector('.gallery');
 	const cursor = document.getElementById('custom-cursor')
-	if(ctrlContainer.contains(event.target)){
+	if(galleryContainer.contains(event.target)){
 		const mouseX = event.clientX
         const viewportWidth = window.innerWidth
 
