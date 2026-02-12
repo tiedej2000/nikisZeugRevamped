@@ -203,6 +203,7 @@ nav svg {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 .gallery .gallery__container .img__container .gallery__info {
   position: absolute;
