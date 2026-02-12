@@ -133,7 +133,9 @@ document.addEventListener('mousemove', (event => {
 	}
 }))
 
-const menuButton = document.querySelector('.hamburger-icon')
+
+
+const menuButton = document.querySelector('nav svg')
 menuButton.addEventListener('click', () =>{
 	toggleNavMenu()
     menuButton.classList.toggle('clicked')
@@ -178,6 +180,7 @@ function playLoading (){
 
 // hide show sections
 const menuItems = document.querySelectorAll('.menu-nav li');
+const cursor = document.getElementById('custom-cursor');
 
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
@@ -207,5 +210,15 @@ menuItems.forEach(item => {
 		// toggleNavMenu()
 		playLoading()
     });
+
+	// Handle cursor change on hover
+	item.addEventListener('mouseenter', () => {
+		cursor.classList.remove('right', 'left');
+		cursor.classList.add('link');
+	});
+
+	item.addEventListener('mouseleave', () => {
+		cursor.classList.remove('link');
+	});
 });
 

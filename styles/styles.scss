@@ -36,11 +36,9 @@ body{
 
 footer{
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 20px;
-    width: 100%;
     z-index: 6666;
     display: flex;
     justify-content: space-between;
@@ -54,62 +52,41 @@ footer{
 
 nav{
     position: fixed;
-    top: 0px;
-    left: 0px;
-    padding: 20px;
-    transform: none;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     height: auto;
     width: auto;
     z-index: 1000000000;
+    display: flex;
+    gap: px;
+    align-items: center;
 
-    .hamburger-icon{
-        width: 28px;
-        height: 28px;
-        z-index: 99999;
-        position: relative;
+    h1{
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
     }
 
-    .bottom-line, .middle-line{
-        stroke-dasharray: 176;  
-        stroke-dashoffset: 0;
-        transition: stroke-dashoffset 0.3s ease;
-        will-change: stroke-dashoffset;
-    }
-
-    .hamburger-icon.clicked .bottom-line {
-        stroke-dashoffset: -88; 
-    }
-
-    .hamburger-icon.clicked .middle-line {
-        stroke-dashoffset: -40; 
+    svg{
+        width: 12px;
+        height: 12px;
     }
 }
 
 .menu-nav {
     position: fixed;
-    left: 0;
-    top: 50%;
-    padding-left: 20px;
-    transform: translateY(-50%);
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
     z-index: 8888;
-    text-align: left;
     opacity: 0;
     pointer-events: none;
     width: auto;
     background-color: transparent;
-
-    &::before{
-        content: '';
-        transform: translateY(-50%);
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100dvh;
-        width: calc(100% + 5vw);
-        background-color: white;
-        transition: all 0.3s ease;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    }
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 
     &.active{
         opacity: 1;
@@ -123,24 +100,20 @@ nav{
     li{
         font-size: var(--regFont);
         text-transform: uppercase;
-        transform: translateX(-10px);
+        transform: translateY(-10px);
         transition: all 0.3s ease;
         transform-origin: right;
         opacity: 0;
         line-height: 1.4;
 
         span{
-            transform: translateX(0);
+            transform: translateY(0);
             transition: transform 0.25s ease;
             display: inline-block;
         }
 
-        &:hover span{
-            transform: translateX(8px);
-        }
-
         &.show{
-            transform: translateX(0px);
+            transform: translateY(0px);
             opacity: 1;
             transition: all 0.3s ease;
         }
@@ -159,14 +132,13 @@ nav{
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none;
-    mix-blend-mode: exclusion;
+    mix-blend-mode: difference;
 
     &.right{
         background: url('../media/cursors/cursor_right.svg');
         background-size: contain;
         background-repeat: no-repeat;
         pointer-events: none;
-        mix-blend-mode: difference;
     }
 
     &.left{
@@ -174,7 +146,13 @@ nav{
         background-size: contain;
         background-repeat: no-repeat;
         pointer-events: none;
-        mix-blend-mode: difference;
+    }
+
+    &.link{
+        background: url('../media/cursors/link.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
     }
 }
 
@@ -236,26 +214,28 @@ nav{
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
 
             img{
-                height: 75dvh;
+                height: 80dvh;
                 width: auto;
                 object-fit: contain;
                 user-select: none;
             }
+
+            .gallery__info{
+                position: absolute;
+                bottom: -30px;
+                left: 0px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                font-size: var(--regFont);
+            }
         }
     }
 
-    .gallery__info{
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        width: auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        font-size: var(--regFont);
-    }
+    
 
 
 
